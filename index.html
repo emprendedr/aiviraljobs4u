@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAutomate | Revoluciona tus Redes Sociales</title>
+    <!-- Font Awesome 6 (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b0f1c 0%, #1a1f33 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(20, 25, 45, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 50px 40px;
+            box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Cabecera con logo y espacio para posible video */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .logo i {
+            background: linear-gradient(135deg, #f97316, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 8px;
+        }
+
+        .video-placeholder {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 40px;
+            padding: 12px 25px;
+            color: #a0a8c0;
+            border: 1px dashed #3b82f6;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .video-placeholder:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: #a855f7;
+        }
+
+        .video-placeholder i {
+            font-size: 1.8rem;
+            color: #f97316;
+        }
+
+        /* Título gancho principal */
+        .headline {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-align: center;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        .headline span {
+            background: linear-gradient(145deg, #f97316, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #f9731640; }
+            100% { text-shadow: 0 0 25px #facc1580; }
+        }
+
+        .subheadline {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* Beneficios con iconos animados */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px;
+            padding: 30px 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .benefit-card:nth-child(2) { animation-delay: 0.6s; }
+        .benefit-card:nth-child(3) { animation-delay: 1.2s; }
+        .benefit-card:nth-child(4) { animation-delay: 1.8s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.02) translateY(-8px);
+            border-color: #a855f7;
+            box-shadow: 0 20px 40px -15px #a855f780;
+        }
+
+        .benefit-card i {
+            font-size: 3.8rem;
+            background: linear-gradient(145deg, #f97316, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* CTA principal y botón animado */
+        .cta-section {
+            background: linear-gradient(145deg, rgba(168, 85, 247, 0.1), rgba(59, 130, 246, 0.1));
+            border-radius: 80px;
+            padding: 40px 30px;
+            margin: 40px 0 20px;
+            text-align: center;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .cta-description {
+            color: #b0b8d0;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Botón animado con enlace a Google Forms */
+        .btn-registro {
+            display: inline-block;
+            background: linear-gradient(45deg, #f97316, #facc15, #a855f7, #3b82f6);
+            background-size: 300% 300%;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 25px 60px;
+            border-radius: 80px;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(249, 115, 22, 0.4);
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+            animation: gradientShift 6s infinite alternate, pulse 2s infinite;
+            letter-spacing: 1px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 20px rgba(249, 115, 22, 0); transform: scale(1.02); }
+            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); transform: scale(1); }
+        }
+
+        .btn-registro:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 45px rgba(168, 85, 247, 0.5);
+            border-color: white;
+        }
+
+        .btn-registro i {
+            margin-right: 15px;
+            font-size: 2.2rem;
+            vertical-align: middle;
+        }
+
+        /* Nota de confianza */
+        .trust-note {
+            text-align: center;
+            color: #6b7280;
+            margin-top: 30px;
+            font-size: 0.95rem;
+        }
+
+        .trust-note i {
+            color: #facc15;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .container { padding: 30px 20px; }
+            .headline { font-size: 2.2rem; }
+            .btn-registro { font-size: 1.5rem; padding: 20px 35px; }
+            .btn-registro i { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera con espacio para video (opcional, puedes insertar un iframe después) -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i> IAutomate<span style="color:#f97316;">.</span>
+            </div>
+            <div class="video-placeholder" onclick="alert('Aquí iría tu video explicativo sobre IA y automatización.')">
+                <i class="fas fa-play-circle"></i>
+                <span>Ver video (opcional)</span>
+            </div>
+        </div>
+
+        <!-- Título gancho -->
+        <h1 class="headline">
+            Automatiza tus redes sociales con <span>IA</span> <br> y multiplica tus resultados sin esfuerzo
+        </h1>
+        <p class="subheadline">
+            Descubre el poder de la inteligencia artificial para crear, programar y optimizar contenido mientras tú duermes.
+        </p>
+
+        <!-- Beneficios con iconos animados -->
+        <div class="benefits">
+            <div class="benefit-card">
+                <i class="fas fa-brain"></i>
+                <h3>Contenido inteligente</h3>
+                <p>La IA genera posts, hashtags y copy optimizados para tu audiencia en segundos.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h3>Ahorro de tiempo</h3>
+                <p>Automatiza la publicación en todas tus redes desde un solo lugar, sin intervención manual.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Resultados medibles</h3>
+                <p>Análisis predictivo que te dice cuándo y qué publicar para maximizar el engagement.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Escala sin límites</h3>
+                <p>Gestiona múltiples cuentas y campañas con la ayuda de asistentes virtuales automatizados.</p>
+            </div>
+        </div>
+
+        <!-- Llamado a la acción principal con botón animado -->
+        <div class="cta-section">
+            <h2 class="cta-title">¿Listo para transformar tu estrategia digital?</h2>
+            <p class="cta-description">
+                Únete a los primeros en probar esta tecnología. <br> <strong>Plazas limitadas</strong> para la versión beta.
+            </p>
+
+            <!-- BOTÓN PRINCIPAL: enlace directo al formulario de Google Forms -->
+            <a href="https://forms.gle/neNcmV7mSjLYcqgb6" target="_blank" class="btn-registro">
+                <i class="fas fa-pen-fancy"></i> Registrarse ahora
+            </a>
+
+            <div class="trust-note">
+                <i class="fas fa-shield-alt"></i> No compartimos tus datos. Acceso inmediato al formulario.
+            </div>
+        </div>
+
+        <!-- Pequeña nota de pie -->
+        <div style="text-align: center; margin-top: 40px; color: #4b5563; font-size: 0.8rem;">
+            <i class="fas fa-magic" style="color: #f97316;"></i> 2025 · IAutomate – Inteligencia Artificial para Redes Sociales
+        </div>
+    </div>
+
+    <!-- (Opcional) Script para tracking o futuras interacciones -->
+    <script>
+        // Puedes agregar analytics aquí si lo deseas
+        console.log('Landing page de IA cargada correctamente.');
+    </script>
+</body>
+</html>
