@@ -63,14 +63,14 @@
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 1.5rem 2rem;
       position: relative;
       z-index: 5;
     }
 
-    /* Encabezado solo con el logo transparente (sin texto adicional) */
+    /* Encabezado con el nuevo logo transparente */
     .navbar {
       display: flex;
       justify-content: center;
@@ -90,19 +90,38 @@
       transform: scale(1.02);
     }
 
-    /* Grid principal: izquierda texto + contador + botón | derecha imagen grande de la chica */
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin: 1rem 0 2rem;
+    /* Imagen de la chica justo antes del título */
+    .hero-image-top {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    /* Tipografía mixta */
+    .hero-image-top img {
+      max-width: 100%;
+      border-radius: 2rem;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255, 217, 102, 0.4);
+    }
+
+    /* Contenido principal */
+    .content-main {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .small-detail {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #FFD966;
+      margin-bottom: 0.5rem;
+    }
+
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.2;
       letter-spacing: -0.02em;
@@ -121,23 +140,15 @@
       font-weight: 400;
       color: #CFD9F0;
       margin-bottom: 1.8rem;
-      border-left: 3px solid #FFD966;
-      padding-left: 1.2rem;
-      max-width: 90%;
-    }
-
-    .small-detail {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 500;
-      color: #FFD966;
-      margin-bottom: 0.5rem;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .benefits-list {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1rem;
       margin: 2rem 0 1.5rem;
     }
@@ -148,6 +159,10 @@
       gap: 1rem;
       font-weight: 500;
       font-size: 1rem;
+      background: rgba(255,255,255,0.03);
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
     }
 
     .benefit-row i {
@@ -157,15 +172,16 @@
       text-align: center;
     }
 
-    /* Contador justo antes del botón de WhatsApp */
+    /* Contador justo antes del botón */
     .countdown-section {
       background: rgba(0, 0, 0, 0.55);
       backdrop-filter: blur(12px);
       border-radius: 1.5rem;
       padding: 0.8rem 1.2rem;
-      margin: 1.5rem 0 1.2rem;
+      margin: 1.5rem auto 1.2rem;
       text-align: center;
       border: 1px solid rgba(255, 215, 0, 0.5);
+      max-width: 500px;
     }
 
     .offer-badge {
@@ -253,6 +269,7 @@
       box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
       text-decoration: none;
       width: fit-content;
+      margin: 0 auto;
       position: relative;
       overflow: hidden;
     }
@@ -288,33 +305,22 @@
       transform: scale(0.98);
     }
 
-    /* Imagen de la chica (grande, al principio) */
-    .hero-image {
-      border-radius: 2rem;
-      overflow: hidden;
-      box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.6);
-      transition: transform 0.4s ease, box-shadow 0.4s;
-      border: 1px solid rgba(255, 217, 102, 0.4);
+    .note-free {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      color: #B1C3F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
 
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.5s;
-    }
-
-    .hero-image:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 30px 50px -12px rgba(255, 200, 0, 0.25);
-    }
-
-    /* Sección de confianza (sin imágenes) */
+    /* Sección de confianza sin imágenes */
     .trust-strip {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 1.8rem;
+      gap: 2rem;
       margin-top: 3rem;
       padding-top: 1.5rem;
       border-top: 1px solid rgba(255, 217, 102, 0.2);
@@ -348,34 +354,19 @@
       padding-top: 2rem;
     }
 
-    .note-free {
-      font-size: 0.8rem;
-      margin-top: 1rem;
-      color: #B1C3F0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    @media (max-width: 950px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-      }
-      .hero-sub {
-        max-width: 100%;
-        text-align: left;
-      }
-      .benefits-list {
-        align-items: flex-start;
-        text-align: left;
-      }
-      .wa-btn {
-        margin: 0 auto;
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
       }
       .hero-title {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+      }
+      .hero-sub {
+        max-width: 95%;
+      }
+      .benefit-row {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
       }
       .timer-block {
         min-width: 55px;
@@ -383,24 +374,27 @@
       .timer-number {
         font-size: 1.5rem;
       }
+      .wa-btn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+      }
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 480px) {
       .hero-title {
-        font-size: 2rem;
-      }
-      .wa-btn {
-        font-size: 0.85rem;
-        padding: 0.7rem 1.2rem;
-      }
-      .countdown-section {
-        padding: 0.6rem;
+        font-size: 1.8rem;
       }
       .timer-block {
         min-width: 45px;
       }
       .timer-number {
         font-size: 1.2rem;
+      }
+      .trust-strip {
+        gap: 1rem;
+      }
+      .trust-number {
+        font-size: 1.4rem;
       }
     }
 
@@ -414,73 +408,67 @@
 <div class="bg-ambient"></div>
 
 <div class="container">
-  <!-- Encabezado con el logo transparente (única aparición del logo) -->
+  <!-- Encabezado con el nuevo logo transparente -->
   <div class="navbar">
-    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral Logo Transparente">
+    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/46EF7E14-7ECC-43AE-9397-2B8A89F64FA3.png" alt="AIViral Logo">
   </div>
 
-  <!-- Hero principal: izquierda texto + contador + botón | derecha imagen de la chica (grande) -->
-  <div class="hero-grid">
-    <div>
-      <div class="small-detail">
-        <i class="fas fa-gem"></i>  CLASE EN VIVO · GRATUITA
-      </div>
-      <h1 class="hero-title">
-        Marca Personal + <span>Activos Digitales</span><br>
-        Gana mientras aprendes
-      </h1>
-      <div class="hero-sub">
-        Descubre el método con IA y automatización para construir tu autoridad, crear productos digitales de valor y monetizar tu conocimiento <strong class="highlight">desde hoy</strong>.
-      </div>
+  <!-- Imagen de la chica justo antes de "CLASE EN VIVO · GRATUITA" -->
+  <div class="hero-image-top">
+    <img src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" alt="Clase Marca Personal - AIViral">
+  </div>
 
-      <div class="benefits-list">
-        <div class="benefit-row"><i class="fas fa-chalkboard"></i> <span>Clase en vivo: marca personal de alto impacto</span></div>
-        <div class="benefit-row"><i class="fas fa-coins"></i> <span>Modelo de negocio: activos digitales + ingresos pasivos</span></div>
-        <div class="benefit-row"><i class="fas fa-trophy"></i> <span>Oportunidad real de ganar mientras aplicas lo aprendido</span></div>
-        <div class="benefit-row"><i class="fas fa-robot"></i> <span>Automatización con IA para potenciar tu contenido</span></div>
-      </div>
+  <!-- Contenido principal centrado -->
+  <div class="content-main">
+    <div class="small-detail">
+      <i class="fas fa-gem"></i>  CLASE EN VIVO · GRATUITA
+    </div>
+    <h1 class="hero-title">
+      Marca Personal + <span>Activos Digitales</span><br>
+      Gana mientras aprendes
+    </h1>
+    <div class="hero-sub">
+      Descubre el método con IA y automatización para construir tu autoridad, crear productos digitales de valor y monetizar tu conocimiento <strong class="highlight">desde hoy</strong>.
+    </div>
 
-      <!-- CONTADOR JUSTO ANTES DEL BOTÓN -->
-      <div class="countdown-section">
-        <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO</div>
-        <div class="price-tag">
-          <span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span>
-        </div>
-        <div class="timer" id="countdownTimer">
-          <div class="timer-block"><div class="timer-number" id="horas">00</div><div class="timer-label">Horas</div></div>
-          <div class="timer-block"><div class="timer-number" id="minutos">00</div><div class="timer-label">Minutos</div></div>
-          <div class="timer-block"><div class="timer-number" id="segundos">00</div><div class="timer-label">Segundos</div></div>
-        </div>
-        <div class="warning-message">
-          <i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por tiempo limitado! Después del contador, el precio sube a <strong>$50</strong>
-        </div>
-      </div>
+    <div class="benefits-list">
+      <div class="benefit-row"><i class="fas fa-chalkboard"></i> <span>Clase en vivo: marca personal de alto impacto</span></div>
+      <div class="benefit-row"><i class="fas fa-coins"></i> <span>Modelo de negocio: activos digitales + ingresos pasivos</span></div>
+      <div class="benefit-row"><i class="fas fa-trophy"></i> <span>Oportunidad real de ganar mientras aplicas lo aprendido</span></div>
+      <div class="benefit-row"><i class="fas fa-robot"></i> <span>Automatización con IA para potenciar tu contenido</span></div>
+    </div>
 
-      <!-- Botón WhatsApp verde animado -->
-      <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="wa-btn">
-        <i class="fab fa-whatsapp"></i> INGRESA AQUÍ PARA DETALLES DE LA CLASE
-        <i class="fas fa-arrow-right"></i>
-      </a>
-      <div class="note-free">
-        <i class="fas fa-check-circle" style="color:#25D366;"></i> 
-        Acceso inmediato al grupo VIP · Sin compromiso · 100% gratuito
+    <!-- CONTADOR JUSTO ANTES DEL BOTÓN -->
+    <div class="countdown-section">
+      <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO</div>
+      <div class="price-tag">
+        <span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span>
+      </div>
+      <div class="timer" id="countdownTimer">
+        <div class="timer-block"><div class="timer-number" id="horas">00</div><div class="timer-label">Horas</div></div>
+        <div class="timer-block"><div class="timer-number" id="minutos">00</div><div class="timer-label">Minutos</div></div>
+        <div class="timer-block"><div class="timer-number" id="segundos">00</div><div class="timer-label">Segundos</div></div>
+      </div>
+      <div class="warning-message">
+        <i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por tiempo limitado! Después del contador, el precio sube a <strong>$50</strong>
       </div>
     </div>
 
-    <!-- Columna derecha: imagen de la chica (grande, al principio) -->
-    <div class="hero-image">
-      <img 
-        src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" 
-        alt="Clase Marca Personal - AIViral"
-        loading="eager"
-      >
+    <!-- Botón WhatsApp verde animado -->
+    <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="wa-btn">
+      <i class="fab fa-whatsapp"></i> INGRESA AQUÍ PARA DETALLES DE LA CLASE
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <div class="note-free">
+      <i class="fas fa-check-circle" style="color:#25D366;"></i> 
+      Acceso inmediato al grupo VIP · Sin compromiso · 100% gratuito
     </div>
   </div>
 
-  <!-- Sección de confianza (sin imágenes, solo métricas) -->
+  <!-- Sección de confianza sin imágenes -->
   <div class="trust-strip">
     <div class="trust-item"><div class="trust-number">+2.5K</div><div class="trust-text">Estudiantes activos<br>generando activos</div></div>
     <div class="trust-item"><div class="trust-number">97%</div><div class="trust-text">Recomiendan la<br>experiencia práctica</div></div>
@@ -488,7 +476,7 @@
     <div class="trust-item"><div class="trust-number"><i class="fas fa-certificate"></i> 5★</div><div class="trust-text">Comunidad + soporte<br>estratégico</div></div>
   </div>
 
-  <!-- Footer limpio, sin imágenes -->
+  <!-- Footer limpio -->
   <div class="footer">
     <p>© 2025 AIViral — Marca personal, activos digitales y automatización inteligente. Clase gratuita por tiempo limitado.</p>
   </div>
@@ -532,7 +520,7 @@
     }, 1000);
   }
 
-  startCountdown(28800); // 8 horas
+  startCountdown(28800);
 </script>
 </body>
 </html>
