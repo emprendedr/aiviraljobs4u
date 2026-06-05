@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>AIViral | Marca Personal + Activos Digitales - Clase Gratis</title>
+  
+  <!-- Open Graph para Facebook (imagen que aparece al compartir) -->
+  <meta property="og:title" content="AIViral - Clase Gratis: Marca Personal + Activos Digitales">
+  <meta property="og:description" content="Aprende a crear activos digitales y gana mientras aprendes. Acceso gratuito por tiempo limitado.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiviralacademy.com">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -61,7 +71,7 @@
       z-index: 5;
     }
 
-    /* Navbar solo con el logo imagen (sin texto) */
+    /* Navbar con el nuevo logo */
     .navbar {
       display: flex;
       justify-content: center;
@@ -71,7 +81,7 @@
     }
 
     .logo-img {
-      width: 70px;
+      width: 80px;
       height: auto;
       filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.3));
       transition: transform 0.2s;
@@ -81,85 +91,7 @@
       transform: scale(1.02);
     }
 
-    /* Contador atractivo */
-    .countdown-section {
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(12px);
-      border-radius: 1.5rem;
-      padding: 1rem 1.8rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      border: 1px solid rgba(255, 215, 0, 0.4);
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .offer-badge {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: #FFD96620;
-      display: inline-block;
-      padding: 0.2rem 1rem;
-      border-radius: 40px;
-      color: #FFE6A3;
-    }
-
-    .price-tag {
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin: 0.3rem 0;
-    }
-
-    .price-tag .gratis {
-      color: #25D366;
-      text-shadow: 0 0 5px #25D36640;
-    }
-
-    .price-tag .after {
-      font-size: 1rem;
-      color: #FFB347;
-    }
-
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1rem 0 0.5rem;
-    }
-
-    .timer-block {
-      background: #0F0E1A;
-      padding: 0.5rem 0.8rem;
-      border-radius: 1rem;
-      min-width: 70px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      border-bottom: 2px solid #FFD966;
-    }
-
-    .timer-number {
-      font-size: 2rem;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      color: #FFD966;
-      line-height: 1;
-    }
-
-    .timer-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #B9C3E6;
-    }
-
-    .warning-message {
-      font-size: 0.75rem;
-      color: #FFB347;
-      margin-top: 0.5rem;
-    }
-
-    /* Grid principal */
+    /* Grid principal - ahora solo texto a la izquierda, logo a la derecha */
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -207,7 +139,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      margin: 2rem 0 2rem;
+      margin: 2rem 0 1.5rem;
     }
 
     .benefit-row {
@@ -225,6 +157,81 @@
       text-align: center;
     }
 
+    /* Contador atractivo (estilo, se colocará antes del botón) */
+    .countdown-section {
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+      border-radius: 1.5rem;
+      padding: 0.8rem 1.2rem;
+      margin: 1.5rem 0 1.2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 215, 0, 0.5);
+    }
+
+    .offer-badge {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: #FFD96620;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      color: #FFE6A3;
+    }
+
+    .price-tag {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin: 0.2rem 0;
+    }
+
+    .price-tag .gratis {
+      color: #25D366;
+      text-shadow: 0 0 5px #25D36640;
+    }
+
+    .price-tag .after {
+      font-size: 0.9rem;
+      color: #FFB347;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .timer-block {
+      background: #0F0E1A;
+      padding: 0.4rem 0.6rem;
+      border-radius: 1rem;
+      min-width: 65px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+      border-bottom: 2px solid #FFD966;
+    }
+
+    .timer-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: #FFD966;
+      line-height: 1;
+    }
+
+    .timer-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #B9C3E6;
+    }
+
+    .warning-message {
+      font-size: 0.7rem;
+      color: #FFB347;
+      margin-top: 0.3rem;
+    }
+
     /* Botón WhatsApp verde estilo nativo + animación */
     .wa-btn {
       display: inline-flex;
@@ -233,10 +240,10 @@
       gap: 0.8rem;
       background: #25D366;
       border: none;
-      padding: 1rem 2.2rem;
+      padding: 0.9rem 2rem;
       border-radius: 60px;
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-family: 'Inter', sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -251,7 +258,7 @@
     }
 
     .wa-btn i {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       transition: transform 0.2s;
     }
 
@@ -281,25 +288,25 @@
       transform: scale(0.98);
     }
 
-    /* Hero image */
-    .hero-image {
+    /* Contenedor del nuevo logo en lugar de la imagen anterior */
+    .logo-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
       border-radius: 2rem;
-      overflow: hidden;
-      box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.6);
-      transition: transform 0.4s ease, box-shadow 0.4s;
-      border: 1px solid rgba(255, 217, 102, 0.4);
+      padding: 1rem;
     }
 
-    .hero-image img {
-      width: 100%;
+    .logo-large {
+      max-width: 85%;
       height: auto;
-      display: block;
-      transition: transform 0.5s;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+      transition: transform 0.3s;
     }
 
-    .hero-image:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 30px 50px -12px rgba(255, 200, 0, 0.25);
+    .logo-large:hover {
+      transform: scale(1.02);
     }
 
     .trust-strip {
@@ -369,14 +376,14 @@
       .hero-title {
         font-size: 2.6rem;
       }
-      .timer {
-        gap: 0.8rem;
-      }
       .timer-block {
-        min-width: 60px;
+        min-width: 55px;
       }
       .timer-number {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+      }
+      .logo-large {
+        max-width: 60%;
       }
     }
 
@@ -385,17 +392,20 @@
         font-size: 2rem;
       }
       .wa-btn {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding: 0.7rem 1.2rem;
       }
       .countdown-section {
-        padding: 0.8rem;
+        padding: 0.6rem;
       }
       .timer-block {
-        min-width: 50px;
+        min-width: 45px;
       }
       .timer-number {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+      }
+      .logo-large {
+        max-width: 70%;
       }
     }
 
@@ -409,28 +419,12 @@
 <div class="bg-ambient"></div>
 
 <div class="container">
-  <!-- Navbar solo con el logo imagen (sin texto AIVIRAL) -->
+  <!-- Barra de navegación con el nuevo logo (2DD1D073...) -->
   <div class="navbar">
-    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" alt="AIViral Logo">
+    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral Logo">
   </div>
 
-  <!-- Contador atractivo: GRATIS por 8 horas, luego sube a $50 -->
-  <div class="countdown-section">
-    <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO</div>
-    <div class="price-tag">
-      <span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span>
-    </div>
-    <div class="timer" id="countdownTimer">
-      <div class="timer-block"><div class="timer-number" id="horas">00</div><div class="timer-label">Horas</div></div>
-      <div class="timer-block"><div class="timer-number" id="minutos">00</div><div class="timer-label">Minutos</div></div>
-      <div class="timer-block"><div class="timer-number" id="segundos">00</div><div class="timer-label">Segundos</div></div>
-    </div>
-    <div class="warning-message">
-      <i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por tiempo limitado! Después del contador, el precio sube a <strong>$50</strong>
-    </div>
-  </div>
-
-  <!-- Hero principal -->
+  <!-- Hero principal: izquierda texto, derecha nuevo logo grande -->
   <div class="hero-grid">
     <div>
       <div class="small-detail">
@@ -451,7 +445,23 @@
         <div class="benefit-row"><i class="fas fa-robot"></i> <span>Automatización con IA para potenciar tu contenido</span></div>
       </div>
 
-      <!-- Botón WhatsApp verde estilo nativo -->
+      <!-- CONTADOR COLOCADO JUSTO ANTES DEL BOTÓN DE WHATSAPP -->
+      <div class="countdown-section">
+        <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO</div>
+        <div class="price-tag">
+          <span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span>
+        </div>
+        <div class="timer" id="countdownTimer">
+          <div class="timer-block"><div class="timer-number" id="horas">00</div><div class="timer-label">Horas</div></div>
+          <div class="timer-block"><div class="timer-number" id="minutos">00</div><div class="timer-label">Minutos</div></div>
+          <div class="timer-block"><div class="timer-number" id="segundos">00</div><div class="timer-label">Segundos</div></div>
+        </div>
+        <div class="warning-message">
+          <i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por tiempo limitado! Después del contador, el precio sube a <strong>$50</strong>
+        </div>
+      </div>
+
+      <!-- Botón WhatsApp verde animado -->
       <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" 
          target="_blank" 
          rel="noopener noreferrer" 
@@ -465,16 +475,13 @@
       </div>
     </div>
 
-    <div class="hero-image">
-      <img 
-        src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" 
-        alt="Clase Marca Personal - AIViral"
-        style="max-width: 100%; height: auto; border-radius: 1.8rem;"
-        loading="eager"
-      >
+    <!-- Columna derecha: Nuevo logo en lugar de la imagen anterior -->
+    <div class="logo-showcase">
+      <img class="logo-large" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral - Marca Personal">
     </div>
   </div>
 
+  <!-- Sección de confianza -->
   <div class="trust-strip">
     <div class="trust-item"><div class="trust-number">+2.5K</div><div class="trust-text">Estudiantes activos<br>generando activos</div></div>
     <div class="trust-item"><div class="trust-number">97%</div><div class="trust-text">Recomiendan la<br>experiencia práctica</div></div>
@@ -488,8 +495,8 @@
 </div>
 
 <script>
-  // Contador de 8 horas (28800 segundos)
-  function startCountdown(durationSeconds, displayElements) {
+  // Contador de 8 horas (28800 segundos) justo antes del botón
+  function startCountdown(durationSeconds) {
     let timer = durationSeconds;
     const hoursElem = document.getElementById('horas');
     const minutesElem = document.getElementById('minutos');
@@ -505,7 +512,6 @@
       
       if (timer <= 0) {
         clearInterval(interval);
-        // Opcional: cambiar mensaje cuando termine
         const priceDiv = document.querySelector('.price-tag');
         if (priceDiv) {
           priceDiv.innerHTML = '<span style="color:#FF8C00;">🔥 OFERTA FINALIZADA 🔥</span><br><span class="after">Precio regular: $50 USD</span>';
@@ -526,8 +532,7 @@
     }, 1000);
   }
 
-  // 8 horas = 8 * 3600 = 28800 segundos
-  startCountdown(28800);
+  startCountdown(28800); // 8 horas
 </script>
 </body>
 </html>
