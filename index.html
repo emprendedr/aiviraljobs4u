@@ -12,7 +12,6 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aiviralacademy.com">
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -71,7 +70,7 @@
       z-index: 5;
     }
 
-    /* Navbar con el nuevo logo */
+    /* Encabezado solo con el logo transparente (sin texto adicional) */
     .navbar {
       display: flex;
       justify-content: center;
@@ -83,7 +82,7 @@
     .logo-img {
       width: 80px;
       height: auto;
-      filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.3));
+      filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.3));
       transition: transform 0.2s;
     }
 
@@ -91,7 +90,7 @@
       transform: scale(1.02);
     }
 
-    /* Grid principal - ahora solo texto a la izquierda, logo a la derecha */
+    /* Grid principal: izquierda texto + contador + botón | derecha imagen grande de la chica */
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -100,6 +99,7 @@
       margin: 1rem 0 2rem;
     }
 
+    /* Tipografía mixta */
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: 3.5rem;
@@ -157,7 +157,7 @@
       text-align: center;
     }
 
-    /* Contador atractivo (estilo, se colocará antes del botón) */
+    /* Contador justo antes del botón de WhatsApp */
     .countdown-section {
       background: rgba(0, 0, 0, 0.55);
       backdrop-filter: blur(12px);
@@ -232,7 +232,7 @@
       margin-top: 0.3rem;
     }
 
-    /* Botón WhatsApp verde estilo nativo + animación */
+    /* Botón WhatsApp verde animado */
     .wa-btn {
       display: inline-flex;
       align-items: center;
@@ -288,27 +288,28 @@
       transform: scale(0.98);
     }
 
-    /* Contenedor del nuevo logo en lugar de la imagen anterior */
-    .logo-showcase {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.02);
+    /* Imagen de la chica (grande, al principio) */
+    .hero-image {
       border-radius: 2rem;
-      padding: 1rem;
+      overflow: hidden;
+      box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.4s ease, box-shadow 0.4s;
+      border: 1px solid rgba(255, 217, 102, 0.4);
     }
 
-    .logo-large {
-      max-width: 85%;
+    .hero-image img {
+      width: 100%;
       height: auto;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-      transition: transform 0.3s;
+      display: block;
+      transition: transform 0.5s;
     }
 
-    .logo-large:hover {
-      transform: scale(1.02);
+    .hero-image:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 50px -12px rgba(255, 200, 0, 0.25);
     }
 
+    /* Sección de confianza (sin imágenes) */
     .trust-strip {
       display: flex;
       justify-content: space-between;
@@ -382,9 +383,6 @@
       .timer-number {
         font-size: 1.5rem;
       }
-      .logo-large {
-        max-width: 60%;
-      }
     }
 
     @media (max-width: 550px) {
@@ -404,9 +402,6 @@
       .timer-number {
         font-size: 1.2rem;
       }
-      .logo-large {
-        max-width: 70%;
-      }
     }
 
     .highlight {
@@ -419,12 +414,12 @@
 <div class="bg-ambient"></div>
 
 <div class="container">
-  <!-- Barra de navegación con el nuevo logo (2DD1D073...) -->
+  <!-- Encabezado con el logo transparente (única aparición del logo) -->
   <div class="navbar">
-    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral Logo">
+    <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral Logo Transparente">
   </div>
 
-  <!-- Hero principal: izquierda texto, derecha nuevo logo grande -->
+  <!-- Hero principal: izquierda texto + contador + botón | derecha imagen de la chica (grande) -->
   <div class="hero-grid">
     <div>
       <div class="small-detail">
@@ -445,7 +440,7 @@
         <div class="benefit-row"><i class="fas fa-robot"></i> <span>Automatización con IA para potenciar tu contenido</span></div>
       </div>
 
-      <!-- CONTADOR COLOCADO JUSTO ANTES DEL BOTÓN DE WHATSAPP -->
+      <!-- CONTADOR JUSTO ANTES DEL BOTÓN -->
       <div class="countdown-section">
         <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO</div>
         <div class="price-tag">
@@ -475,13 +470,17 @@
       </div>
     </div>
 
-    <!-- Columna derecha: Nuevo logo en lugar de la imagen anterior -->
-    <div class="logo-showcase">
-      <img class="logo-large" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/2DD1D073-3F70-4E41-81F4-9E44A3CFC3DF.png" alt="AIViral - Marca Personal">
+    <!-- Columna derecha: imagen de la chica (grande, al principio) -->
+    <div class="hero-image">
+      <img 
+        src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" 
+        alt="Clase Marca Personal - AIViral"
+        loading="eager"
+      >
     </div>
   </div>
 
-  <!-- Sección de confianza -->
+  <!-- Sección de confianza (sin imágenes, solo métricas) -->
   <div class="trust-strip">
     <div class="trust-item"><div class="trust-number">+2.5K</div><div class="trust-text">Estudiantes activos<br>generando activos</div></div>
     <div class="trust-item"><div class="trust-number">97%</div><div class="trust-text">Recomiendan la<br>experiencia práctica</div></div>
@@ -489,13 +488,14 @@
     <div class="trust-item"><div class="trust-number"><i class="fas fa-certificate"></i> 5★</div><div class="trust-text">Comunidad + soporte<br>estratégico</div></div>
   </div>
 
+  <!-- Footer limpio, sin imágenes -->
   <div class="footer">
     <p>© 2025 AIViral — Marca personal, activos digitales y automatización inteligente. Clase gratuita por tiempo limitado.</p>
   </div>
 </div>
 
 <script>
-  // Contador de 8 horas (28800 segundos) justo antes del botón
+  // Contador regresivo de 8 horas (28800 segundos)
   function startCountdown(durationSeconds) {
     let timer = durationSeconds;
     const hoursElem = document.getElementById('horas');
