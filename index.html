@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>AIViral | Marca Personal + Activos Digitales - Clase Gratis</title>
+  <title>AIViral | IA para ingresos online - Entrenamiento gratis</title>
   
-  <!-- Open Graph para Facebook -->
-  <meta property="og:title" content="AIViral - Clase Gratis: Marca Personal + Activos Digitales">
-  <meta property="og:description" content="Aprende a crear activos digitales y gana mientras aprendes. Acceso gratuito por 1 hora.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AIViral - Entrenamiento gratis: IA para ingresos online">
+  <meta property="og:description" content="Aprende a usar IA para encontrar oportunidades digitales y automatizar tareas. Sin experiencia técnica.">
   <meta property="og:image" content="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,9 +21,8 @@
       font-family: 'Inter', sans-serif;
       background: #07050F;
       color: #F0F3FA;
-      line-height: 1.4;
+      line-height: 1.5;
       scroll-behavior: smooth;
-      overflow-x: hidden;
     }
     .bg-ambient {
       position: fixed;
@@ -58,251 +57,113 @@
       position: relative;
       z-index: 5;
     }
-    .navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 0.5rem;
-    }
-    .logo-img {
-      width: 80px;
-      height: auto;
-      filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.3));
-      transition: transform 0.2s;
-    }
+    .navbar { display: flex; justify-content: center; margin-bottom: 1.5rem; }
+    .logo-img { width: 80px; height: auto; filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.3)); transition: transform 0.2s; }
     .logo-img:hover { transform: scale(1.02); }
-    .hero-image-top {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .hero-image-top img {
-      max-width: 100%;
-      border-radius: 2rem;
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255, 217, 102, 0.4);
-    }
-    .content-main {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .small-detail {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 500;
-      color: #FFD966;
-      margin-bottom: 0.5rem;
-    }
-    .hero-title {
+    .hero-image-top { text-align: center; margin-bottom: 2rem; }
+    .hero-image-top img { max-width: 100%; border-radius: 2rem; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5); border: 1px solid rgba(255, 217, 102, 0.4); }
+    .content-main { max-width: 850px; margin: 0 auto; }
+    section { margin-bottom: 2.5rem; }
+    h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-size: 2.8rem;
       font-weight: 800;
       line-height: 1.2;
-      letter-spacing: -0.02em;
       margin-bottom: 1rem;
-    }
-    .hero-title span {
-      background: linear-gradient(120deg, #FFD966, #FFB347, #C084FC);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .hero-sub {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #CFD9F0;
-      margin-bottom: 1.8rem;
-      max-width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .benefits-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin: 2rem 0 1.5rem;
-    }
-    .benefit-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-weight: 500;
-      font-size: 1rem;
-      background: rgba(255,255,255,0.03);
-      padding: 0.5rem 1.2rem;
-      border-radius: 60px;
-      backdrop-filter: blur(4px);
-    }
-    .benefit-row i {
-      font-size: 1.4rem;
-      color: #FFD966;
-      width: 32px;
       text-align: center;
+    }
+    h1 span { background: linear-gradient(120deg, #FFD966, #FFB347, #C084FC); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin: 1.5rem 0 1rem;
+      color: #FFD966;
+      text-align: center;
+    }
+    h3 { font-size: 1.3rem; font-weight: 600; margin: 1rem 0 0.5rem; color: #FFE6A3; }
+    .highlight { color: #FFD966; font-weight: 600; }
+    .problem-text, .autoridad-text { color: #CFD9F0; margin-bottom: 1rem; }
+    .grid-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(4px);
+      padding: 0.7rem 1.2rem;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .benefit-card i { color: #FFD966; font-size: 1rem; }
+    .testimonios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .testimonio {
+      background: rgba(0,0,0,0.4);
+      border-left: 3px solid #FFD966;
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      max-width: 280px;
+      font-style: italic;
+      color: #E2E8F0;
     }
     .countdown-section {
       background: rgba(0, 0, 0, 0.55);
       backdrop-filter: blur(12px);
       border-radius: 1.5rem;
       padding: 0.8rem 1.2rem;
-      margin: 1.5rem auto 1.2rem;
+      margin: 1.5rem auto 1.8rem;
       text-align: center;
       border: 1px solid rgba(255, 215, 0, 0.5);
       max-width: 500px;
     }
-    .offer-badge {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: #FFD96620;
-      display: inline-block;
-      padding: 0.2rem 1rem;
-      border-radius: 40px;
-      color: #FFE6A3;
-    }
-    .price-tag {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin: 0.2rem 0;
-    }
-    .price-tag .gratis { color: #25D366; text-shadow: 0 0 5px #25D36640; }
-    .price-tag .after { font-size: 0.9rem; color: #FFB347; }
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      margin: 0.5rem 0 0.2rem;
-    }
-    .timer-block {
-      background: #0F0E1A;
-      padding: 0.4rem 0.6rem;
-      border-radius: 1rem;
-      min-width: 65px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      border-bottom: 2px solid #FFD966;
-    }
-    .timer-number {
-      font-size: 1.8rem;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      color: #FFD966;
-      line-height: 1;
-    }
-    .timer-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #B9C3E6;
-    }
-    .warning-message {
-      font-size: 0.7rem;
-      color: #FFB347;
-      margin-top: 0.3rem;
-    }
-    .wa-btn {
+    .offer-badge { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; background: #FFD96620; display: inline-block; padding: 0.2rem 1rem; border-radius: 40px; color: #FFE6A3; }
+    .price-tag { font-size: 1.4rem; font-weight: 800; margin: 0.2rem 0; }
+    .price-tag .gratis { color: #25D366; }
+    .timer { display: flex; justify-content: center; gap: 1.2rem; margin: 0.5rem 0; }
+    .timer-block { background: #0F0E1A; padding: 0.4rem 0.6rem; border-radius: 1rem; min-width: 65px; border-bottom: 2px solid #FFD966; }
+    .timer-number { font-size: 1.8rem; font-weight: 800; font-family: 'Playfair Display', serif; color: #FFD966; }
+    .timer-label { font-size: 0.65rem; text-transform: uppercase; color: #B9C3E6; }
+    .warning-message { font-size: 0.7rem; color: #FFB347; margin-top: 0.3rem; }
+    .btn-wa {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
       background: #25D366;
-      border: none;
       padding: 0.9rem 2rem;
       border-radius: 60px;
       font-weight: 800;
       font-size: 1.1rem;
-      font-family: 'Inter', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       color: #0B0A1A;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
       text-decoration: none;
       width: fit-content;
       margin: 0 auto;
-      position: relative;
-      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
     }
-    .wa-btn i { font-size: 1.4rem; transition: transform 0.2s; }
-    .wa-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      transition: left 0.6s;
-      z-index: -1;
-    }
-    .wa-btn:hover::before { left: 100%; }
-    .wa-btn:hover {
-      transform: scale(1.02) translateY(-3px);
-      background: #20b859;
-      box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
-    }
-    .wa-btn:active { transform: scale(0.98); }
-    .note-free {
-      font-size: 0.8rem;
-      margin-top: 1rem;
-      color: #B1C3F0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-    .trust-strip {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 217, 102, 0.2);
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .trust-number {
-      font-size: 1.8rem;
-      font-weight: 800;
-      font-family: 'Playfair Display', serif;
-      color: #FFD966;
-    }
-    .trust-text {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #B9C7E6;
-    }
-    .footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: #7C7F9E;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 2rem;
-    }
+    .btn-wa:hover { transform: scale(1.02); background: #20b859; box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6); }
+    .cta-center { text-align: center; margin: 2rem 0; }
+    .footer { margin-top: 3rem; text-align: center; font-size: 0.75rem; color: #7C7F9E; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; }
     @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
       .container { padding: 1rem; }
-      .hero-title { font-size: 2.2rem; }
-      .hero-sub { max-width: 95%; }
-      .benefit-row { font-size: 0.9rem; padding: 0.4rem 1rem; }
       .timer-block { min-width: 55px; }
       .timer-number { font-size: 1.5rem; }
-      .wa-btn { font-size: 0.9rem; padding: 0.7rem 1.5rem; }
     }
-    @media (max-width: 480px) {
-      .hero-title { font-size: 1.8rem; }
-      .timer-block { min-width: 45px; }
-      .timer-number { font-size: 1.2rem; }
-      .trust-strip { gap: 1rem; }
-      .trust-number { font-size: 1.4rem; }
-    }
-    .highlight { font-weight: 700; color: #FFD966; }
   </style>
 </head>
 <body>
@@ -312,62 +173,88 @@
     <img class="logo-img" src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/46EF7E14-7ECC-43AE-9397-2B8A89F64FA3.png" alt="AIViral Logo">
   </div>
   <div class="hero-image-top">
-    <img src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" alt="Clase Marca Personal - AIViral">
+    <img src="https://raw.githubusercontent.com/emprendedr/aiviraljobs4u/main/63B40EAF-5D94-428F-B07E-7B4EA171089E.png" alt="Oportunidades IA">
   </div>
   <div class="content-main">
-    <div class="small-detail"><i class="fas fa-gem"></i> CLASE EN VIVO · GRATUITA</div>
-    <h1 class="hero-title">Marca Personal + <span>Activos Digitales</span><br>Gana mientras aprendes</h1>
-    <div class="hero-sub">Descubre el método con IA y automatización para construir tu autoridad, crear productos digitales de valor y monetizar tu conocimiento <strong class="highlight">desde hoy</strong>.</div>
-    <div class="benefits-list">
-      <div class="benefit-row"><i class="fas fa-chalkboard"></i> <span>Clase en vivo: marca personal de alto impacto</span></div>
-      <div class="benefit-row"><i class="fas fa-coins"></i> <span>Modelo de negocio: activos digitales + ingresos pasivos</span></div>
-      <div class="benefit-row"><i class="fas fa-trophy"></i> <span>Oportunidad real de ganar mientras aplicas lo aprendido</span></div>
-      <div class="benefit-row"><i class="fas fa-robot"></i> <span>Automatización con IA para potenciar tu contenido</span></div>
+    <!-- Título principal -->
+    <h1>Descubre Cómo la <span>Inteligencia Artificial</span> Está Creando Nuevas Oportunidades de Ingresos Online</h1>
+    <p style="text-align: center; margin-bottom: 1.5rem;">Aprende a utilizar herramientas de IA para encontrar oportunidades digitales, automatizar tareas y desarrollar habilidades que pueden ayudarte a generar ingresos desde cualquier lugar. <strong>Sin experiencia técnica. Sin complicaciones. Con capacitación paso a paso.</strong></p>
+    
+    <div class="cta-center">
+      <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> QUIERO VER EL ENTRENAMIENTO GRATIS</a>
     </div>
 
-    <!-- CONTADOR DE 1 HORA -->
+    <!-- Sección: El problema -->
+    <section>
+      <h2>La realidad es que el mundo laboral está cambiando rápidamente</h2>
+      <p class="problem-text">Mientras muchas personas siguen buscando las mismas oportunidades de siempre, miles ya están aprovechando la Inteligencia Artificial para:</p>
+      <div class="grid-benefits">
+        <div class="benefit-card"><i class="fas fa-check-circle"></i> Automatizar tareas repetitivas</div>
+        <div class="benefit-card"><i class="fas fa-check-circle"></i> Crear contenido más rápido</div>
+        <div class="benefit-card"><i class="fas fa-check-circle"></i> Ofrecer servicios digitales</div>
+        <div class="benefit-card"><i class="fas fa-check-circle"></i> Encontrar nuevas fuentes de ingresos</div>
+        <div class="benefit-card"><i class="fas fa-check-circle"></i> Ahorrar tiempo y aumentar productividad</div>
+      </div>
+      <p class="problem-text" style="text-align: center; font-weight: 500;">La pregunta no es si la IA seguirá creciendo. La pregunta es si aprenderás a utilizarla a tu favor.</p>
+    </section>
+
+    <!-- Sección: Lo que aprenderás -->
+    <section>
+      <h2>Dentro del entrenamiento descubrirás:</h2>
+      <div class="grid-benefits">
+        <div class="benefit-card"><i class="fas fa-bullseye"></i> Cómo utilizar herramientas de IA aunque seas principiante</div>
+        <div class="benefit-card"><i class="fas fa-chart-line"></i> Estrategias para crear contenido atractivo para redes sociales</div>
+        <div class="benefit-card"><i class="fas fa-rocket"></i> Métodos para aumentar tu productividad con automatización</div>
+        <div class="benefit-card"><i class="fas fa-store"></i> Ideas de negocios digitales impulsados por IA</div>
+        <div class="benefit-card"><i class="fas fa-search"></i> Cómo identificar oportunidades digitales con potencial de crecimiento</div>
+      </div>
+    </section>
+
+    <!-- Sección de autoridad -->
+    <section>
+      <h2>¿Por qué tantas personas están interesándose en la IA?</h2>
+      <p class="autoridad-text">La Inteligencia Artificial se está integrando en múltiples industrias y cada vez más empresas y emprendedores buscan formas de aprovecharla para aumentar su productividad y eficiencia. Aprender estas habilidades hoy puede ayudarte a estar mejor preparado para las oportunidades del futuro.</p>
+    </section>
+
+    <!-- Testimonios -->
+    <section>
+      <h2>Historias reales</h2>
+      <div class="testimonios">
+        <div class="testimonio">“Pensaba que la IA era demasiado complicada. Después de aprender los fundamentos, descubrí herramientas que ahora uso todos los días.”</div>
+        <div class="testimonio">“Lo que más me gustó fue que todo está explicado paso a paso.”</div>
+        <div class="testimonio">“Ahora entiendo cómo la IA puede ayudarme a crear contenido y ahorrar tiempo.”</div>
+      </div>
+    </section>
+
+    <!-- Contador de 1 hora + CTA final -->
     <div class="countdown-section">
       <div class="offer-badge"><i class="fas fa-clock"></i> OFERTA RELÁMPAGO · 1 HORA</div>
-      <div class="price-tag">
-        <span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span>
-      </div>
+      <div class="price-tag"><span class="gratis">✨ GRATIS ✨</span> <span class="after">(valor regular $50 USD)</span></div>
       <div class="timer" id="countdownTimer">
         <div class="timer-block"><div class="timer-number" id="horas">00</div><div class="timer-label">Horas</div></div>
         <div class="timer-block"><div class="timer-number" id="minutos">00</div><div class="timer-label">Minutos</div></div>
         <div class="timer-block"><div class="timer-number" id="segundos">00</div><div class="timer-label">Segundos</div></div>
       </div>
-      <div class="warning-message">
-        <i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por 1 hora! Después del contador, el precio sube a <strong>$50</strong>
-      </div>
+      <div class="warning-message"><i class="fas fa-exclamation-triangle"></i> ¡Acceso gratuito por 1 hora! Después del contador, el precio sube a <strong>$50</strong></div>
     </div>
 
-    <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" target="_blank" rel="noopener noreferrer" class="wa-btn">
-      <i class="fab fa-whatsapp"></i> INGRESA AQUÍ PARA DETALLES DE LA CLASE
-      <i class="fas fa-arrow-right"></i>
-    </a>
-    <div class="note-free"><i class="fas fa-check-circle" style="color:#25D366;"></i> Acceso inmediato al grupo VIP · Sin compromiso · 100% gratuito</div>
-  </div>
-
-  <div class="trust-strip">
-    <div class="trust-item"><div class="trust-number">+2.5K</div><div class="trust-text">Estudiantes activos<br>generando activos</div></div>
-    <div class="trust-item"><div class="trust-number">97%</div><div class="trust-text">Recomiendan la<br>experiencia práctica</div></div>
-    <div class="trust-item"><div class="trust-number">📈 3x</div><div class="trust-text">Más visibilidad<br>con automatización IA</div></div>
-    <div class="trust-item"><div class="trust-number"><i class="fas fa-certificate"></i> 5★</div><div class="trust-text">Comunidad + soporte<br>estratégico</div></div>
+    <div class="cta-center">
+      <a href="https://chat.whatsapp.com/IWvpND8mpB5LrmKM6p7icZ?s=cl&p=i&ilr=1" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> QUIERO EMPEZAR AHORA</a>
+    </div>
+    <p style="text-align: center; font-size: 0.8rem; margin-top: 0.5rem;"><i class="fas fa-lock"></i> Acceso inmediato · Sin compromiso · 100% gratuito</p>
   </div>
 
   <div class="footer">
-    <p>© 2025 AIViral — Marca personal, activos digitales y automatización inteligente. Clase gratuita por tiempo limitado (1 hora).</p>
+    <p>© 2025 AIViral — Entrenamiento: IA para ingresos online. Clase gratuita por tiempo limitado (1 hora).</p>
   </div>
 </div>
 
 <script>
-  // Contador de 1 hora = 3600 segundos
   function startCountdown(durationSeconds) {
     let timer = durationSeconds;
     const hoursElem = document.getElementById('horas');
     const minutesElem = document.getElementById('minutos');
     const secondsElem = document.getElementById('segundos');
-
     function updateDisplay() {
       const hours = Math.floor(timer / 3600);
       const minutes = Math.floor((timer % 3600) / 60);
@@ -375,30 +262,21 @@
       hoursElem.textContent = hours.toString().padStart(2, '0');
       minutesElem.textContent = minutes.toString().padStart(2, '0');
       secondsElem.textContent = seconds.toString().padStart(2, '0');
-      
       if (timer <= 0) {
         clearInterval(interval);
         const priceDiv = document.querySelector('.price-tag');
-        if (priceDiv) {
-          priceDiv.innerHTML = '<span style="color:#FF8C00;">🔥 OFERTA FINALIZADA 🔥</span><br><span class="after">Precio regular: $50 USD</span>';
-        }
+        if (priceDiv) priceDiv.innerHTML = '<span style="color:#FF8C00;">🔥 OFERTA FINALIZADA 🔥</span><br><span class="after">Precio regular: $50 USD</span>';
         const warning = document.querySelector('.warning-message');
-        if(warning) warning.innerHTML = '<i class="fas fa-hourglass-end"></i> Tiempo agotado. La clase ahora tiene costo de $50.';
+        if(warning) warning.innerHTML = '<i class="fas fa-hourglass-end"></i> Tiempo agotado. El entrenamiento ahora tiene costo de $50.';
       }
     }
-    
     updateDisplay();
     const interval = setInterval(() => {
-      if (timer <= 0) {
-        clearInterval(interval);
-      } else {
-        timer--;
-        updateDisplay();
-      }
+      if (timer <= 0) clearInterval(interval);
+      else { timer--; updateDisplay(); }
     }, 1000);
   }
-
-  startCountdown(3600); // 1 hora = 3600 segundos
+  startCountdown(3600);
 </script>
 </body>
 </html>
